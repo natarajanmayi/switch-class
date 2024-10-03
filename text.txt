@@ -1,0 +1,112 @@
+const button = document.querySelector('button')
+        button.addEventListener("click", displayStats)
+
+        const resultdiv = document.createElement("div")
+
+        resultdiv.id = "result"
+
+        let result = document.getElementById("div")
+
+        document.getElementById("wrapper").appendChild(resultdiv)
+
+     
+     function displayStats(){
+
+        const input = document.getElementById("input")
+
+        const fruits = input.options[input.selectedIndex].value
+
+        let Availability = ''
+
+        let Color = ''
+
+        let Nutrients = ''
+
+        switch(fruits) {
+
+
+            case "Apple" : 
+
+            Availability = "during Rainy"
+           Color = "Red and Green"
+           Nutrients = "Vitamin C and Dietary Fiber"
+
+           break
+
+           case "Banana" : 
+           
+           Availability = "during Winter"
+            Color = "Yellow and Red"
+            Nutrients = "Potassium and Vitamin B6"
+
+            break
+
+            case "Orange" : 
+
+            Availability = "during Monsoon"
+        Color = "Orange"
+        Nutrients = "Vitamin C and Folate"
+
+        break
+
+        case "Grapes" : 
+
+        Availabilty = "during Spring"
+         Color = "Green and Purple"
+         Nutrients = "Antioxidants" 
+
+         break
+            
+        }
+
+        
+
+        const text = `The fruit ${fruits} is typically available ${Availability}. It comes in various colors such as ${Color}. It is rich in nutrients including ${Nutrients}.`
+
+        resultdiv.innerHTML = text
+
+     }
+
+..........
+Apple:
+ Availability = "during Rainy"
+           Color = "Red and Green"
+           Nutrients = "Vitamin C and Dietary Fiber"
+
+
+
+Banana:
+Availability = "during Winter"
+            Color = "Yellow and Red"
+            Nutrients = "Potassium and Vitamin B6"
+
+
+
+orange:
+
+ Availability = "during Monsoon"
+        Color = "Orange"
+        Nutrients = "Vitamin C and Folate"
+
+
+Grapes:
+
+Availabilty = "during Spring"
+         Color = "Green and Purple"
+         Nutrients = "Antioxidants" 
+
+
+
+`The fruit ${fruits} is typically available ${Availability}. It comes in various colors such as ${Color}. It is rich in nutrients including ${Nutrients}.`;
+
+
+
+.........
+
+
+<select id="input">
+          <option value="Apple">Apple</option>
+          <option value="Banana">Banana</option>
+          <option value="Orange">Orange</option>
+          <option value="Grapes">Grapes</option>
+        </select>
